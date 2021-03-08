@@ -29,6 +29,22 @@ ___
 
 ### User stories
 
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+1 | Site User | Register to the site | View my profile 
+2 | Site User | Log In and Log Out | Access to my account
+3 | Site User | Receive email confirmation | Confirm successful registration
+4 | Site User | Have a user profile | View my purchases, and be able to check when my membership or classes expire
+6 | Potential customer | View a list of packages | Select to purchase
+5 | Potential customer | View packages details | See price and description
+7 | Potential customer | View a timetable and see if there are spaces available | Book a place
+8 | Customer | View items in my bag | Check the cost to review
+9 | Customer | Enter payment information and see that process is secure | Checkout without issues
+10 | Customer | Select a classes after payment | See booked place
+11 | Administrator | Add new classes or packages | To make them visible to customer
+12 | Administrator | Edit or update classes or packages | To change a price, description or time
+13 | Administrator | Delete classes or packages | To remove from a site
+
 ## Structure of the website
 
 ## Skeleton
