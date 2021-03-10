@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f1f8f9;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: "Heebo", Sans-serif;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* navbar */
+.nav-color{
+    background-color: #f1f8f9;
+}
+
+.nav-color a{
+    color: #5ab7de;
+}
