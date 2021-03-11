@@ -38,6 +38,10 @@ body {
     background-color: #f2f9fa;
 }
 
+.header-container {
+    padding-top: 250px;
+}
+
 /* -------------------------------- Media Queries --------------------------------*/
 
 /* Slightly larger container on xl screens */
@@ -50,7 +54,7 @@ body {
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .header-container {
-        padding-top: 100px;
+        padding-top: 150px;
     }
 }
 
