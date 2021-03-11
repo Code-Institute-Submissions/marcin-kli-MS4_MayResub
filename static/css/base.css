@@ -19,10 +19,37 @@ body {
 }
 
 /* navbar */
-.nav-color{
-    background-color: #f1f8f9;
+.nav-color, .dropdown-item{
+    background-color: #f2f9fa;
+    font-weight: 600;
 }
 
 .nav-color a{
     color: #5ab7de;
+}
+
+.nav-color li a:hover, .dropdown-item a:hover{
+    background-color: #f2f9fa;
+    color: #000000;
+}
+
+.dropdown-menu{
+    background-color: #f2f9fa;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+
+    .header-container {
+        padding-top: 100px;
+    }
 }

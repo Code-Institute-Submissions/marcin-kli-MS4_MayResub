@@ -15,6 +15,7 @@
 
     {% block corecss %}
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         <link rel="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet"> 
          <link rel="stylesheet" href="{% static 'css/base.css' %}" class="stylesheet">
     {% endblock %}
 
@@ -35,7 +36,7 @@
   </head>
   <body>
      <header class="container-fluid fixed-top">
-        <div id="topnav" class="row nav-color py-lg-2 sm-12 d-lg-flex">
+        <div id="topnav" class="row nav-color py-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0"><strong>Fitness</strong> Studio</h2>
@@ -43,6 +44,12 @@
             </div>
             <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item">
+                        <a href="" class="nav-link">Fitness Classes</a>    
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="" class="nav-link">Packages</a>
+                    </li>
                     <li class="list-inline-item dropdown">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
