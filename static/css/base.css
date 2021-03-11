@@ -9,7 +9,7 @@ body {
     font-family: "Heebo", Sans-serif;
 }
 
-/* from Bulma */
+/* from Bulma for all font awesome icons*/
 .icon {
     align-items: center;
     display: inline-flex;
@@ -18,13 +18,14 @@ body {
     width: 1.5rem;
 }
 
-/* navbar */
+/* -------------------------------- Navbar -------------------------------- */
+
 .nav-color, .dropdown-item{
     background-color: #f2f9fa;
     font-weight: 600;
 }
 
-.nav-color a{
+.nav-color a, .navbar-light .navbar-nav .nav-link{
     color: #5ab7de;
 }
 
@@ -37,7 +38,7 @@ body {
     background-color: #f2f9fa;
 }
 
-/* -------------------------------- Media Queries */
+/* -------------------------------- Media Queries --------------------------------*/
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -48,8 +49,14 @@ body {
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-
     .header-container {
         padding-top: 100px;
+    }
+}
+
+/* mobile navbar font logo size */
+@media (max-width: 991px) {
+    .nav-link h2 {
+        font-size: 1.75rem
     }
 }

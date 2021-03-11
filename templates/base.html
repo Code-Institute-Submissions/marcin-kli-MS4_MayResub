@@ -37,9 +37,9 @@
   <body>
      <header class="container-fluid fixed-top">
         <div id="topnav" class="row nav-color py-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Fitness</strong> Studio</h2>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link">
+                    <h2 class="logo-font text-black my-0"><strong>Fitness Studio</strong></h2>
                 </a>
             </div>
             <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
@@ -88,6 +88,7 @@
                 </ul>
             </div>
         </div>
+        {% include 'includes/mobile-top-header.html' %}
         <hr class="my-0">
     </header>
 
