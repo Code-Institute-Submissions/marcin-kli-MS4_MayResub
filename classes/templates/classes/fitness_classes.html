@@ -2,12 +2,17 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-4">{{ classes }}</h1>
-            <p class="lead text-center px-4">Find motivation and achieve your fitness goals</p>
+<main class="header-container h-100">
+    {% for class in classes %}
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-5">{{ class.name }}</h1>
+                <p class="lead px-4">{{ class.description }}</p>
+                <p class="lead px-4">{{ class.image }}</p>
+            </div>
         </div>
     </div>
-</div>
+    {% endfor %}
+</main>
 {% endblock %}

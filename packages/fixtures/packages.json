@@ -1,0 +1,24 @@
+[
+  {
+    "pk": 1,
+    "model": "packages.packages",
+    "fields": {
+      "id": "001",
+      "name": "Month",
+      "description": "Monthly pass",
+      "price": 199.00,
+      "category": 1
+    }
+  },
+  {
+    "pk": 2,
+    "model": "packages.packages",
+    "fields": {
+      "id": "002",
+      "name": "Single",
+      "description": "Single class",
+	  "price": 199.00,
+      "category": 1
+    }
+  }
+]
