@@ -1,0 +1,24 @@
+[
+  {
+    "pk": 1,
+    "model": "classes.classes",
+    "fields": {
+      "id": "001",
+      "name": "ABS",
+      "description": "description of class",
+      "image_url":"http://link1",
+	  "image": "link1.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "classes.classes",
+    "fields": {
+      "id": "002",
+      "name": "Yoga",
+      "description": "description of class yoga",
+      "image_url":"http://link1",
+	  "image": "link2.jpg"
+    }
+  }
+]
