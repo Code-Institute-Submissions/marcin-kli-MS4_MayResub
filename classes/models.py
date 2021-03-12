@@ -4,6 +4,10 @@ from django.db import models
 
 
 class Classes(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Classes'
+
     id = models.IntegerField
     name = models.CharField(max_length=254)
     description = models.TextField()

@@ -3,4 +3,15 @@ from .models import Classes
 
 # Register your models here.
 
-admin.site.register(Classes)
+
+class ClassesAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'description',
+        'image',
+    )
+
+    ordering = ('name',)
+
+
+admin.site.register(Classes, ClassesAdmin)
