@@ -4,8 +4,8 @@
     "model": "packages.packages",
     "fields": {
       "id": "001",
-      "name": "Month",
-      "description": "Monthly pass",
+      "name": "Monthly pass",
+      "description": "Monthly pass for all classes",
       "price": 199.00,
       "category": 1
     }
@@ -16,8 +16,8 @@
     "fields": {
       "id": "002",
       "name": "Single",
-      "description": "Single class",
-	  "price": 199.00,
+      "description": "Single class pass. Please book a class in advance.",
+	  "price": 15.00,
       "category": 1
     }
   }
