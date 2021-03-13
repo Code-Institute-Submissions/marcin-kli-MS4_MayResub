@@ -1,4 +1,5 @@
-""" A contexts to return the shopping bag context on all app available on all pages """
+""" A contexts to return the shopping bag on all app available on all pages """
+
 
 def bag_contents(request):
 

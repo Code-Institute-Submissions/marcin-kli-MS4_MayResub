@@ -5,10 +5,34 @@
 <main class="header-container">
     <div class="container">
         <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-5">{{ package.name }}</h1>
-                <p class="lead px-4">{{ package.description }}</p>
-                <p class="lead px-4">{{ package.price }}</p>
+            <div class="container d-lg-flex">
+                <div class="col-12 col-lg-9">
+                    <h1 class="display-5">{{ package.name }}</h1>
+                    <p class="lead px-4">{{ package.description }}</p>
+                    <p class="lead px-4">{{ package.price }}</p>
+                </div>
+                <hr class="d-sm-none">
+                <div class="col-12 col-lg-3 text-center">
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <div class="form-group mt-3">
+                                    <div class="input-group">
+                                        <strong class="pt-2">Quantity:</strong>
+                                        <input class="form-control qty_input mx-3" type="number" name="quantity" value="1" min="1" max="9" data-item_id="{{ package.id }}" id="id_qty_{{ package.id }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="{% url 'packages' %}" class="btn btn-info mt-2">Go back to add more</a>
+                                <input type="submit" class="btn btn-info mt-2" value="Add to Bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
