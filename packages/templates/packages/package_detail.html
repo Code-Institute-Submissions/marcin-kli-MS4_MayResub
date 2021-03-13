@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="header-container">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-5">{{ package.name }}</h1>
+                <p class="lead px-4">{{ package.description }}</p>
+                <p class="lead px-4">{{ package.price }}</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
