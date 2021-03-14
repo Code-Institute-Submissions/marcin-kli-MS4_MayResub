@@ -18,7 +18,6 @@ def package_detail(request, package_id):
     """ A view to show individual package details """
 
     package = get_object_or_404(Packages, pk=package_id)
-    print(package)
     context = {
         'package': package,
     }
