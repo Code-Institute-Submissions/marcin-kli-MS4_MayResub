@@ -31,8 +31,41 @@
                                             <td class="py-3">
                                                 <p class="my-0">€{{ item.package.price }}</p>
                                             </td>
-                                            <td class="py-3 w-25">
-                                                <p class="my-0">{{ item.quantity }}</p>
+                                            <td class="w-25">
+                                                <form class="form update-form" action="" method="POST">
+                                                    {% csrf_token %}
+                                                    <div class="form-row">
+                                                        <div class="col-12">
+                                                            <div class="form-group mt-3">
+                                                                <div class="input-group">
+                                                                    <strong class="pt-2">Quantity:</strong>
+                                                                    <div class="input-group-prepend">
+                                                                        <button class="decrement-qty btn btn-sm rounded-0" 
+                                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                                            <span>
+                                                                                <i class="fas fa-minus-circle fa-sm"></i>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <input class="form-control form-control-sm qty_input my-1 mx-3" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="10"
+                                                                        data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                                    <div class="input-group-append">
+                                                                        <button class="increment-qty btn btn-sm rounded-0"
+                                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                                            <span>
+                                                                                <i class="fas fa-plus-circle fa-sm"></i>
+                                                                            </span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <a class="update-link text-info ml-lg-5 px-lg-3"><small>Update</small></a>
+                                                                    <a class="remove-item text-danger float-right ml-lg-2 px-lg-3" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </td>
                                             <td class="py-3">
                                                 <p class="my-0">€{{ item.subtotal }}</p>
@@ -77,4 +110,10 @@
         </div>
     </div>
 </main>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'packages/includes/quantity_input_script.html' %}
+{% include 'packages/includes/update_remove_script.html' %}
 {% endblock %}

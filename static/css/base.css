@@ -42,6 +42,16 @@ body {
     padding-top: 250px;
 }
 
+/* -------------------------------- Checkout  -------------------------------- */
+
+.table td{
+    vertical-align: middle;
+}
+
+.update-link, .remove-item{
+    cursor: pointer;
+}
+
 /* -------------------------------- Media Queries --------------------------------*/
 
 /* Slightly larger container on xl screens */
