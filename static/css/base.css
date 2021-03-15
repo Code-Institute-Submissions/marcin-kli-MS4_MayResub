@@ -52,6 +52,23 @@ body {
     cursor: pointer;
 }
 
+/* -------------------------------- Toasts messages --------------------------------*/
+
+.message-container {
+    position: fixed;
+    top: 75px;
+    right: 20px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* -------------------------------- Media Queries --------------------------------*/
 
 /* Slightly larger container on xl screens */
