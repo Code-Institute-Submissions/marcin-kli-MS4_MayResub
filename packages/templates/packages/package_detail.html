@@ -44,14 +44,14 @@
                             </div>
 
                             <div class="col-12">
+                                <a href="{% url 'view_bag' %}" class="btn btn-success mt-2">Go to Bag</a>
+                                <input type="submit" class="btn btn-warning mt-2" value="Add to Bag">
                                 <a href="{% url 'packages' %}" class="btn btn-info mt-2">
                                     <span class="icon">
                                         <i class="fas fa-chevron-circle-left"></i>
                                     </span>
                                     Go back to add more
                                 </a>
-                                <input type="submit" class="btn btn-info mt-2" value="Add to Bag">
-                                <a href="{% url 'view_bag' %}" class="btn btn-info mt-2">Go to bag</a>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>

@@ -32,7 +32,7 @@
                                                 <p class="my-0">€{{ item.package.price }}</p>
                                             </td>
                                             <td class="w-25">
-                                                <form class="form update-form" action="" method="POST">
+                                                <form class="form update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
                                                     {% csrf_token %}
                                                     <div class="form-row">
                                                         <div class="col-12">
@@ -58,14 +58,13 @@
                                                                         </button>
                                                                     </div>
                                                                 </div>
-                                                                <div class="input-group">
-                                                                    <a class="update-link text-info ml-lg-5 px-lg-3"><small>Update</small></a>
-                                                                    <a class="remove-item text-danger float-right ml-lg-2 px-lg-3" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
-                                                                </div>
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
+                                                <a class="update-link text-info ml-lg-5 px-lg-3"><small>Update</small></a>
+                                                <a class="remove-item text-danger float-right ml-lg-2 px-lg-3" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                             </td>
                                             <td class="py-3">
                                                 <p class="my-0">€{{ item.subtotal }}</p>
@@ -97,11 +96,11 @@
                             </div>
                         {% else %}
                             <p class="lead mb-5">Your bag is empty.</p>
-                            <a href="{% url 'packages' %}" class="btn btn-info rounded-0 btn-lg">
+                            <a href="{% url 'packages' %}" class="btn btn-info">
                                 <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
+                                    <i class="fas fa-chevron-circle-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                Go back to add packages
                             </a>
                         {% endif %}
                     </div>
