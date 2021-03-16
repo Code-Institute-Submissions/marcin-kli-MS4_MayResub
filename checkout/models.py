@@ -1,6 +1,6 @@
+import uuid
 from django.db import models
 from django.db.models import Sum
-from django.conf import settings
 
 from packages.models import Packages
 
@@ -18,7 +18,6 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
-
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
@@ -28,9 +27,10 @@ class Order(models.Model):
     def update_total(self):
         """
         Update grand total each time a line item is added,
-        accounting for delivery costs.
         """
+        print("Update total")
         self.total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        print(self.total)
         self.save()
 
     def save(self, *args, **kwargs):
@@ -48,7 +48,7 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Packages, null=False, blank=False, on_delete=models.CASCADE)
+    package = models.ForeignKey(Packages, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
@@ -57,8 +57,10 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.product.price * self.quantity
+        self.lineitem_total = self.package.price * self.quantity
+        print(self.lineitem_total)
+        print(self.package.price)
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'ID {self.packages.id} on order {self.order.order_number}'
+        return f'ID {self.package.id} on order {self.order.order_number}'
