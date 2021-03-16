@@ -23,8 +23,6 @@ def bag_contents(request):
             'subtotal': quantity * package.price
         })
 
-    grand_total = total
-
     context = {
         'bag_items': bag_items,
         'total': total,
