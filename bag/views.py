@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from packages.models import Packages
 
+
 def view_bag(request):
     """ A view to return the shopping bag page """
 
