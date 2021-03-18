@@ -28,10 +28,8 @@ class Order(models.Model):
         """
         Update grand total each time a line item is added,
         """
-        print("Update total")
         # self.total = 420
-        self.total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
-        print(self.total)
+        self.total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.save()
 
     def save(self, *args, **kwargs):
@@ -59,8 +57,6 @@ class OrderLineItem(models.Model):
         and update the order total.
         """
         self.lineitem_total = self.package.price * self.quantity
-        print(self.lineitem_total)
-        print(self.package.price)
         super().save(*args, **kwargs)
 
     def __str__(self):

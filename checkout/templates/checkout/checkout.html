@@ -25,16 +25,16 @@
                             </div>
                         </div>
                         {% for item in bag_items %}
-                            <div class="row">
-                                
-                                <div class="col-7">
-                                    <p class="my-0"><strong>{{ item.package.name }}</strong></p>
-                                    <p class="my-0 small text-muted"><strong>Qty: {{ item.quantity }}</strong></p>
-                                </div>
-                                <div class="col-3 text-right">
-                                    <p class="my-0 small text-muted"><strong>€{{ item.package.price }}</strong></p>
-                                </div>
+                        <div class="row">
+                            
+                            <div class="col-7">
+                                <p class="my-0"><strong>{{ item.package.name }}</strong></p>
+                                <p class="my-0 small text-muted"><strong>Qty: {{ item.quantity }}</strong></p>
                             </div>
+                            <div class="col-3 text-right">
+                                <p class="my-0 small text-muted"><strong>€{{ item.package.price }}</strong></p>
+                            </div>
+                        </div>
                         {% endfor %}
                         <hr class="my-0">
                         <div class="row text-black text-right">
