@@ -6,7 +6,7 @@ from packages.models import Packages
 
 
 class Order(models.Model):
-    order_number = models.CharField(max_length=32, null=False, editable=False)
+    order_number = models.CharField(max_length=16, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
@@ -24,7 +24,7 @@ class Order(models.Model):
         """
         Generate a random, unique order number using UUID
         """
-        return uuid.uuid4().hex.upper()
+        return uuid.uuid4().hex.upper()[:16]
 
     def update_total(self):
         """
