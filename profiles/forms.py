@@ -20,7 +20,7 @@ class UserProfileForm(forms.ModelForm):
             'postcode': 'Postal Code',
             'town': 'Town',
         }
-        print(placeholders)
+
         self.fields['phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':
