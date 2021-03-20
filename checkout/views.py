@@ -18,7 +18,6 @@ import json
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
-        print(request.POST.get('client_secret'))
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
@@ -131,19 +130,15 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    print(save_info)
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
-        print('profile')
-        print(profile)
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
 
         # Save the user's info
         if save_info:
-            print('save')
             profile_data = {
                 'phone_number': order.phone_number,
                 'street_address1': order.street_address1,
