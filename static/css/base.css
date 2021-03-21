@@ -18,6 +18,11 @@ body {
     width: 1.5rem;
 }
 
+.form-border{    
+    color: #000;
+    border: 1px solid #000;
+}
+
 /* -------------------------------- Navbar -------------------------------- */
 
 .nav-color, .dropdown-item{

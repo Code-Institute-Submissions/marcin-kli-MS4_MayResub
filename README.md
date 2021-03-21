@@ -35,8 +35,8 @@ ___
 2 | Site User | Log In and Log Out | Access to my account
 3 | Site User | Receive email confirmation | Confirm successful registration
 4 | Site User | Have a user profile | View my purchases, and be able to check when my membership or classes expire
-6 | Potential customer | View a list of packages | Select to purchase
-5 | Potential customer | View packages details | See price and description
+5 | Potential customer | View a list of packages | Select to purchase
+6 | Potential customer | View packages details | See price and description
 7 | Potential customer | View a timetable and see if there are spaces available | Book a place
 8 | Customer | View items in my bag | Check the cost to review
 9 | Customer | Enter payment information and see that process is secure | Checkout without issues
