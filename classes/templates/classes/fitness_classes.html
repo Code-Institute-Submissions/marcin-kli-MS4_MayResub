@@ -9,7 +9,11 @@
             <div class="container">
                 <h1 class="display-5">{{ class.name }}</h1>
                 <p class="lead px-4">{{ class.description }}</p>
-                <p class="lead px-4">{{ class.image }}</p>
+                {% if class.image_url %}
+                    <img class="" src="{{ class.image_url }}" alt="{{ class.name }}">
+                    {% else %}
+                    <img class="" src="../media/{{ class.image }}" alt="{{ class.name }}">
+                {% endif %}
             </div>
         </div>
     </div>

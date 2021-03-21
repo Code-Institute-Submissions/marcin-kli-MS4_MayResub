@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
+
 from .models import Classes
 from .forms import ClassesForm
 
@@ -19,6 +21,16 @@ def classes(request):
 
 def add_classes(request):
     """ Add a classes to the store """
+    if request.method == 'POST':
+        form = ClassesForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Classes successfully added!')
+            return redirect(reverse('add_classes'))
+        else:
+            messages.error(request, 'Failed to add classes. Please ensure the form is valid.')
+    else:
+        form = ClassesForm()
     form = ClassesForm()
     template = 'classes/add_classes.html'
     context = {
