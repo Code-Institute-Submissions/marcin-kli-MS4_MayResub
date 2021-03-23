@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 from .models import Packages
 from .forms import PackagesForm
 
@@ -28,8 +28,13 @@ def package_detail(request, package_id):
     return render(request, 'packages/package_detail.html', context)
 
 
+@login_required
 def add_package(request):
     """ Add a package to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only administrator can see this site.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = PackagesForm(request.POST, request.FILES)
         if form.is_valid():
@@ -50,8 +55,13 @@ def add_package(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_package(request, package_id):
     """ Edit a package in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only administrator can see this site.')
+        return redirect(reverse('home'))
+
     package = get_object_or_404(Packages, pk=package_id)
     if request.method == 'POST':
         form = PackagesForm(request.POST, request.FILES, instance=package)
@@ -74,8 +84,13 @@ def edit_package(request, package_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_package(request, package_id):
     """ Delete a class from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only administrator can see this site.')
+        return redirect(reverse('home'))
+
     package = get_object_or_404(Packages, pk=package_id)
     package.delete()
     messages.success(request, 'Package deleted!')
