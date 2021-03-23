@@ -33,9 +33,9 @@ def add_package(request):
     if request.method == 'POST':
         form = PackagesForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            package = form.save()
             messages.success(request, 'Package successfully added!')
-            return redirect(reverse('add_packages'))
+            return redirect(reverse('packages'))
         else:
             messages.error(request, 'Failed to add package. Please ensure the form is valid.')
     else:
@@ -72,3 +72,11 @@ def edit_package(request, package_id):
     }
 
     return render(request, template, context)
+
+
+def delete_package(request, package_id):
+    """ Delete a class from the store """
+    package = get_object_or_404(Packages, pk=package_id)
+    package.delete()
+    messages.success(request, 'Package deleted!')
+    return redirect(reverse('packages'))
