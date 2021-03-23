@@ -43,8 +43,9 @@ body {
     background-color: #f2f9fa;
 }
 
-.header-container {
-    padding-top: 250px;
+.main-container {
+    padding-top: 150px;
+    padding-bottom: 2em;
 }
 
 /* -------------------------------- Checkout  -------------------------------- */
@@ -182,13 +183,6 @@ body {
 	color: #000;
     background-color:  #be9004;
     border-color:  #be9004;
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .header-container {
-        padding-top: 150px;
-    }
 }
 
 /* mobile navbar font logo size */
