@@ -7,20 +7,20 @@
         <div class="row">
             <div class="col-12 col-lg-6 offset-lg-3">
                 <hr>
-                <h2 class="mb-4">Classes Management</h2>
-                <h5 class="text-muted">Add a class</h5>
+                <h2 class="mb-4">Packages Management</h2>
+                <h5 class="text-muted">Add a package</h5>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-lg-6 offset-lg-3">
-                <form method="POST" action="{% url 'add_classes' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'add_package' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div>
-                        <a class="btn btn-info" href="{% url 'classes' %}">Cancel</a>
-                        <button class="btn btn-warning" type="submit">Add Classes</button>
+                        <a class="btn btn-info" href="{% url 'packages' %}">Cancel</a>
+                        <button class="btn btn-warning" type="submit">Add Package</button>
                     </div>
                 </form>
             </div>            
