@@ -3,26 +3,43 @@
 
 {% block content %}
 <main class="main-container">
-    {% for class in classes %}
     <div class="container">
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-5">{{ class.name }}</h1>
-                <p class="lead px-4">{{ class.description }}</p>
-                {% if class.image_url %}
-                    <img class="" src="{{ class.image_url }}" alt="{{ class.name }}">
-                    {% else %}
-                    <img class="" src="../media/{{ class.image }}" alt="{{ class.name }}">
-                {% endif %}
+        <div class="row">
+            {% for class in classes %}
+            <div class="col-12">
+                <div class="jumbotron">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-8">
+                                <h1 class="display-6 mt-5">{{ class.name }}</h1>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                {% if class.image_url %}
+                                    <img src="{{ class.image_url }}" alt="{{ class.name }}">
+                                    {% else %}
+                                    <img src="../media/{{ class.image }}" alt="{{ class.name }}">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-12">
+                                <p class="lead px-lg-4">{{ class.description }}</p>
+                                <a href="{% url 'package_detail' 2 %}" class="btn btn-info mt-2 ">Buy single class</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 text-center">
+                            {% if request.user.is_superuser %}
+                                <hr><p class="text-dark">Administrator options:</p>
+                                <a class="btn btn-sm btn-primary" style="width: 75px;" href="{% url 'edit_class' class.id %}">Edit</a> 
+                                <a class="btn btn-sm btn-danger" style="width: 75px;" href="{% url 'delete_class' class.id %}">Delete</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
             </div>
-            {% if request.user.is_superuser %}
-                <small class="ml-3">
-                    <a href="{% url 'edit_class' class.id %}">Edit</a> | 
-                    <a class="text-danger" href="{% url 'delete_class' class.id %}">Delete</a>
-                </small>
-            {% endif %}
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
 </main>
 {% endblock %}

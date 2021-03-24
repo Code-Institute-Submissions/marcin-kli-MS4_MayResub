@@ -3,7 +3,7 @@
 
 {% block content %}
 <main class="main-container">  
-    <div class="container ">
+    <div class="container">
         <div class="row">
             {% for package in packages %}
             <div class="col-12 col-lg-6">
@@ -16,6 +16,7 @@
                             <a href="{% url 'package_detail' package.id %}" class="btn btn-info mt-2">Buy this package</a>
                             <div class="mt-3">
                                 {% if request.user.is_superuser %}
+                                <hr><p class="text-dark">Administrator options:</p>
                                     <a class="btn btn-sm btn-primary" style="width: 75px;" href="{% url 'edit_package' package.id %}">Edit</a> 
                                     <a class="btn btn-sm btn-danger" style="width: 75px;" href="{% url 'delete_package' package.id %}">Delete</a>
                                 {% endif %}
