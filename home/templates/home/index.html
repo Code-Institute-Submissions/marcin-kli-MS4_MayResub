@@ -2,16 +2,21 @@
 {% load static %}
 
 {% block content %}
-<main class="main-container">
-    <div class="container jumbotron">
+<main class="main-container index_img mt-3">
+    <div class="container jumbotron" >
         <div class="container">
             <h1 class="display-4">Fitness Studio</h1>
-            <p class="lead text-center px-4">Find motivation and achieve your fitness goals</p>
+            <h3 class="text-center px-4">Find motivation and achieve your fitness goals</h3>
         </div>
     </div>
     <div class="container jumbotron">
         <div class="container">
             <h1 class="display-4">Time table </h1>
+            {% if graph %}
+                <div style="width:600;height:500">
+            {{ graph|safe }}
+                </div>
+            {% endif %}
         </div>
     </div>
     <div class="container">

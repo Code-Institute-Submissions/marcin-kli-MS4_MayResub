@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #f1f8f9;
+    /* background-color: #f1f8f9; */
     height: calc(100vh - 164px);
     color: #555;
     font-family: "Heebo", Sans-serif;
@@ -125,13 +125,23 @@ body {
     overflow-y: auto;
 }
 
-/* -------------------------------- Media Queries --------------------------------*/
+/* -------------------------------- Landing page  --------------------------------*/
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+.index_img{
+    background-image: url('/media/logan-weaver-pYQ2ASycjgI-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75% 40px;
+}
+
+.main-container .jumbotron{
+    background-color: #e9ecefdd;
+    margin-bottom: 10em;
+}
+
+.main-container .jumbotron .container h1{
+    color: #5ab7de;
+    text-align: center;
 }
 
 /* Allauth form formatting */
@@ -211,6 +221,15 @@ body {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
+}
+
+/* -------------------------------- Media Queries --------------------------------*/
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
 }
 
 /* mobile navbar font logo size */
