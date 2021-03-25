@@ -9,6 +9,16 @@ body {
     font-family: "Heebo", Sans-serif;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5ab7de;
+}
+
+
+
 /* from Bulma for all font awesome icons*/
 .icon {
     align-items: center;
