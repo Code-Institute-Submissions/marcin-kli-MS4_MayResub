@@ -6,14 +6,14 @@
     <div class="container">
         <div class="row">
             {% for class in classes %}
-            <div class="col-12">
-                <div class="jumbotron mb-5">
-                    <div class="container">
+            <div class="col-12 col-lg-6 ">
+                <div class="height123 jumbotron text-center mb-5">
+                    <div class="mx-lg-1">
                         <div class="row">
-                            <div class="col-12 col-md-8">
-                                <h1 class="display-6 mt-5">{{ class.name }}</h1>
+                            <div class="col-12 col-md-8 col-lg-12 px-1">
+                                <h1 class="display-6">{{ class.name }}</h1>
                             </div>
-                            <div class="col-12 col-md-3">
+                            <div class="col-12 col-md-4 col-lg-12">
                                 {% if class.image_url %}
                                     <img src="{{ class.image_url }}" class="rounded mx-auto d-block" alt="{{ class.name }}">
                                     {% else %}
@@ -21,7 +21,7 @@
                                 {% endif %}
                             </div>
                         </div>
-                        <div class="row text-center">
+                        <div class="row mt-3">
                             <div class="col-12">
                                 <p class="lead px-lg-4">{{ class.description }}</p>
                                 <a href="{% url 'package_detail' 2 %}" class="btn btn-info mt-2 ">Buy single class</a>

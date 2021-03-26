@@ -56,6 +56,14 @@ a:hover {
     padding-bottom: 2em;
 }
 
+/* -------------------------------- Fitness classes  -------------------------------- */
+
+@media (min-width: 991px){
+    .height123 {
+       min-height: 43em;
+    }
+}
+
 /* -------------------------------- Checkout  -------------------------------- */
 
 .table td{
