@@ -7,7 +7,7 @@
         <div class="row">
             {% for class in classes %}
             <div class="col-12">
-                <div class="jumbotron">
+                <div class="jumbotron mb-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-8">
@@ -15,9 +15,9 @@
                             </div>
                             <div class="col-12 col-md-3">
                                 {% if class.image_url %}
-                                    <img src="{{ class.image_url }}" alt="{{ class.name }}">
+                                    <img src="{{ class.image_url }}" class="rounded mx-auto d-block" alt="{{ class.name }}">
                                     {% else %}
-                                    <img src="{{ MEDIA_URL }}{{ class.image }}" alt="{{ class.name }}">
+                                    <img src="{{ MEDIA_URL }}{{ class.image }}" class="rounded mx-auto d-block" alt="{{ class.name }}">
                                 {% endif %}
                             </div>
                         </div>

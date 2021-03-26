@@ -17,8 +17,6 @@ a:hover {
   color: #5ab7de;
 }
 
-
-
 /* from Bulma for all font awesome icons*/
 .icon {
     align-items: center;
@@ -217,7 +215,7 @@ a:hover {
     border-color:  #be9004;
 }
 
-/* Product Form */
+/* Package Form */
 
 .btn-file {
     position: relative;
@@ -264,5 +262,13 @@ a:hover {
 @media (min-width: 360px) and (max-width: 991px) {
     .nav-link h2 {
         font-size: 1.75rem
+    }
+}
+
+/* less space between jumbotron on mobile devices  */
+@media (max-width: 991px){
+    .main-container .jumbotron{
+        background-color: #e9ecefdd;
+        margin-bottom: 5em;
     }
 }

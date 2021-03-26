@@ -6,13 +6,13 @@
     <div class="container">
         <div class="jumbotron">
             <div class="container d-lg-flex">
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-7">
                     <h1 class="display-5">{{ package.name }}</h1>
                     <p class="lead px-4">{{ package.description }}</p>
                     <p class="lead px-4">Price: {{ package.price }}</p>
                 </div>
                 <hr class="d-sm-none">
-                <div class="col-12 col-lg-4 text-center">
+                <div class="col-12 col-lg-5 text-center">
                     <form class="form" action="{% url 'add_to_bag' package.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
