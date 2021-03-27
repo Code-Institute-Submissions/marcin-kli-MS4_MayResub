@@ -17,6 +17,10 @@ a:hover {
   color: #5ab7de;
 }
 
+.text-weight{
+    font-weight: 600;
+}
+
 /* from Bulma for all font awesome icons*/
 .icon {
     align-items: center;
