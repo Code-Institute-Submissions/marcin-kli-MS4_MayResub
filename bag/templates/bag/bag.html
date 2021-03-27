@@ -20,12 +20,12 @@
                                     <div class="col-7 text-center">{{ item.package.name }}</div>
                                 </div>
                                 <div class="row mb-2">
-                                    <div class="col-6">Price</div>
-                                    <div class="col-6 text-center">€{{ item.package.price }}</div>
+                                    <div class="col-5">Price</div>
+                                    <div class="col-7 text-center">€{{ item.package.price }}</div>
                                 </div>
                                 <div class="row mb-2">
-                                    <div class="col-6 pt-4">Qty</div>
-                                    <div class="col-6">
+                                    <div class="col-5 pt-4">Qty</div>
+                                    <div class="col-7">
                                         <form class="form update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
                                             {% csrf_token %}
                                             <div class="form-row">
@@ -60,9 +60,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-6">Subtotal</div>
-                                    <div class="col-6 text-center">€{{ item.subtotal }}</div>
-                                </div>
+                                    <div class="col-5">Subtotal</div>
+                                    <div class="col-7 text-center">€{{ item.subtotal }}</div>
+                                </div>                                
+                                <hr>
                             </div>
                             {% endfor %}
                         </div>
