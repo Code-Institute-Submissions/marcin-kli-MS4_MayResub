@@ -35,6 +35,10 @@ a:hover {
     border: 1px solid #000;
 }
 
+.mb-10{
+    margin-bottom: 10em;
+}
+
 /* -------------------------------- Navbar -------------------------------- */
 
 .nav-color, .dropdown-item{
@@ -284,3 +288,8 @@ a:hover {
         margin-bottom: 5em;
     }
 }
+
+@media (min-width: 1553px) {
+    .pb-custom{
+        padding-bottom: 1.5em !important;
+    }

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="main-container index_img mt-3">
+    <h1 class="sr-only">Contact Us</h1>
+    <div class="row no-gutters">
+        <div class="card col-sm-12 col-lg-10 offset-lg-1 mb-10">
+
+            <div class="card-body elegant-color amber-text text-center p-left text-transfer pb-0">
+                
+                <h4 class="card-title text-info">Contact us today!</h4>
+                <hr class="hr-light">
+            </div>
+            <div class="card-body">                
+                <form onsubmit="return sendMail(this);">
+                    <div class="form-row">
+                        <div class="col col-sm-10 offset-sm-1">
+                            <h4 class="text-center text-info mb-4">Fill the form and book a space today!</h4>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailaddress">Email</label>
+                                <input type="email" class="form-control" name="emailaddress" id="emailaddress" minlength="8" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="comments">Message</label>
+                                <textarea class="form-control" id="comments" name="comments" rows="3" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-info">Send a message <i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript" src="{% static 'js/email.js' %}"></script>
+{% endblock %}
