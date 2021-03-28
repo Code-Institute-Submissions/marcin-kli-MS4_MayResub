@@ -75,9 +75,173 @@ Website contains:
 
 ### Wireframes
 
+- Home Page
+
+    <details><summary>Desktop (click to view)</summary>
+
+    ![](md_data/wireframes/01home_page_d.png)
+    </details>
+    <details><summary>Mobile (click to view)</summary>
+    
+    ![](md_data/wireframes/01home_page_m.png)
+    </details>
+
+- Fitness classes page
+
+    <details><summary>Desktop (click to view)</summary>
+
+    ![](md_data/wireframes/03fitness_classes_d.png)
+    </details>
+    <details><summary>Mobile (click to view)</summary>
+    
+    ![](md_data/wireframes/03fitness_classes_m.png)
+    </details>
+
+- Packages page
+
+    <details><summary>Desktop (click to view)</summary>
+
+    ![](md_data/wireframes/02packages_d.png)
+    </details>
+    <details><summary>Mobile (click to view)</summary>
+    
+    ![](md_data/wireframes/02packages_m.png)
+    </details>
+
+- Packages details
+
+    <details><summary>Desktop (click to view)</summary>
+
+    ![](md_data/wireframes/04package_details_d.png)
+    </details>
+    <details><summary>Mobile (click to view)</summary>
+    
+    ![](md_data/wireframes/04package_details_m.png)
+    </details>
+
+- Checkout
+
+    <details><summary>Desktop (click to view)</summary>
+
+    ![](md_data/wireframes/05checkout_d.png)
+    </details>
+    <details><summary>Mobile (click to view)</summary>
+    
+    ![](md_data/wireframes/05checkout_m.png)
+    </details>
+
+- Login
+
+    <details><summary>Desktop (click to view)</summary>
+
+    ![](md_data/wireframes/06login_d.png)
+    </details>
+    <details><summary>Mobile (click to view)</summary>
+    
+    ![](md_data/wireframes/06login_m.png)
+    </details>
+
+- Register
+
+    <details><summary>Desktop (click to view)</summary>
+
+    ![](md_data/wireframes/06register_d.png)
+    </details>
+    <details><summary>Mobile (click to view)</summary>
+    
+    ![](md_data/wireframes/06register_m.png)
+    </details>
+
 ### Divergence final website look from wireframes
 
+I had to change an idea of functionality website during a project. Here are differences:
+- On home page there is an `contact us` link instead of book a space. 
+- On fitness classes and packages pages there is no `book` button.
+- On package details I change buttons to: `Go to Bag`, `Add to Bag` and `Go back and add more`
+- On Register and Login pages I used crispy forms instead of custom form that I had in mind.
+
 ### Database schema
+
+Database contains 6 tables (collections):
+- user
+- order
+- user's packages
+- package
+- categories
+- class
+
+I use Django default databases SQLite in gitpod environment and PostgreSQL database with Heroku as production enviroment.
+
+<details><summary>Database schema (click to view)</summary>
+
+![](md_data/database/database_tables.png)
+
+</details>
+
+#### User table for checkout app:
+
+| Database Key | Field Type | 
+:-------------:|:----------------:
+order_number | CharField
+user_profile | ForeignKey
+full_name | CharField
+street_address1 | CharField
+street_address2 | CharField
+town | CharField
+country | CountryField
+postcode | CharField
+phone_number | CharField
+email | EmailField
+date | DateTimeField
+total | DecimalField
+original_bag | TextField
+stripe_pid | CharField
+
+#### User table for classes app:
+
+| Database Key | Field Type | 
+:-------------:|:----------------:
+id | IntegerField
+name | CharField
+description | TextField
+image_url | URLField
+image | ImageField
+
+#### User table for packages app:
+
+- #### Category:
+
+| Database Key | Field Type | 
+:-------------:|:----------------:
+id | IntegerField
+name | CharField
+
+- #### Packages:
+
+| Database Key | Field Type | 
+:-------------:|:----------------:
+category | ForeignKey
+id | IntegerField
+name | CharField
+description | TextField
+price | DecimalField
+
+#### User table for profiles app:
+
+| Database Key | Field Type | 
+:-------------:|:----------------:
+user | OneToOneField
+phone_number | CharField
+street_address1 | CharField
+street_address2 | CharField
+town | CharField
+postcode | CharField
+country | CountryField
+
+### Security
+
+All sensitive access keys are stored as `Config Vars` on Heroku cloud application platform.
+Django allauth was used to meet security requirements.
 
 ## Surface
 
