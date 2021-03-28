@@ -38,11 +38,13 @@ def add_package(request):
     if request.method == 'POST':
         form = PackagesForm(request.POST, request.FILES)
         if form.is_valid():
-            package = form.save()
+            package = form.save()  # this is used to add package to the form.
             messages.success(request, 'Package successfully added!')
             return redirect(reverse('packages'))
         else:
-            messages.error(request, 'Failed to add package. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add package. \
+                    Please ensure the form is valid.')
     else:
         form = PackagesForm()
 
@@ -70,7 +72,9 @@ def edit_package(request, package_id):
             messages.success(request, 'Package successfully updated!')
             return redirect(reverse('packages'))
         else:
-            messages.error(request, 'Failed to update package. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update package. \
+                    Please ensure the form is valid.')
     else:
         form = PackagesForm(instance=package)
         messages.info(request, f'You are editing {package.name}')

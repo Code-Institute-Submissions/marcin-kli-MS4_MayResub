@@ -33,7 +33,9 @@ def add_class(request):
             messages.success(request, 'Classes successfully added!')
             return redirect(reverse('classes'))
         else:
-            messages.error(request, 'Failed to add classes. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add classes. \
+                    Please ensure the form is valid.')
     else:
         form = ClassesForm()
     form = ClassesForm()
@@ -60,7 +62,9 @@ def edit_class(request, classes_id):
             messages.success(request, 'Classes successfully updated!')
             return redirect(reverse('classes'))
         else:
-            messages.error(request, 'Failed to update classes. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update classes. \
+                    Please ensure the form is valid.')
     else:
         form = ClassesForm(instance=classes)
         messages.info(request, f'You are editing {classes.name}')
