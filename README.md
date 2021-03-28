@@ -178,7 +178,7 @@ I use Django default databases SQLite in gitpod environment and PostgreSQL datab
 
 </details>
 
-#### User table for checkout app:
+<details><summary>User table for checkout app: (click to view)</summary>
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
@@ -197,7 +197,9 @@ total | DecimalField
 original_bag | TextField
 stripe_pid | CharField
 
-#### User table for classes app:
+</details>
+
+<details><summary>User table for classes app: (click to view)</summary>
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
@@ -207,7 +209,10 @@ description | TextField
 image_url | URLField
 image | ImageField
 
-#### User table for packages app:
+</details>
+
+
+<details><summary>User table for packages app: (click to view)</summary>
 
 - #### Category:
 
@@ -226,7 +231,9 @@ name | CharField
 description | TextField
 price | DecimalField
 
-#### User table for profiles app:
+</details>
+
+<details><summary>User table for profiles app: (click to view)</summary>
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
@@ -238,6 +245,8 @@ town | CharField
 postcode | CharField
 country | CountryField
 
+</details>
+
 ### Security
 
 All sensitive access keys are stored as `Config Vars` on Heroku cloud application platform.
@@ -247,9 +256,25 @@ Django allauth was used to meet security requirements.
 
 ### Colors
 
+Colours used in a project:
+Purpose | Colour value
+------------ | -------------
+background | #ffffff 
+main font  | #555
+navigation font | #5ab7de
+navigation hoover | #000000
+buttons | #17a2b8 #ffc107 #28a745
+admin buttons | #007bff #dc3545
+
 ### Fonts
 
+* As a main font I used Heebo.
+
 ### Images
+
+I used images from:
+
+*  [unsplash.com](https://www.unsplash.com) and it is credited in [credits](#credits) section.
 
 [Back to Table of contents](#table-of-contents)
 ___
