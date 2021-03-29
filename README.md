@@ -461,10 +461,19 @@ Site was tested across multiple virtual mobile devices and browsers. I checked a
 
 All tests Passed for devices from 360px on Chrome developer tools and Mozilla web developer tolls.
 
-### Issues found during site development
+## Issues found during site development
 
 I found few issues with cards on landing page on Mozilla browser only. At Chrome browser there was no issues.
 
+## Code Validation
+
+Nu Html Checker
+
+One issue related to ID in `a` tag. This appear because there are same id's for mobile and desktop navbars.
+
+![](md_data/testing/nuhtml.png)
+
+No issued on W3C CSS Validator
 
 [Back to Table of contents](#table-of-contents)
 ___
