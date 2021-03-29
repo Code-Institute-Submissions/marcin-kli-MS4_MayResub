@@ -470,6 +470,109 @@ I found few issues with cards on landing page on Mozilla browser only. At Chrome
 ___
 # Deployment
 
+HEROKU
+
+This project was deployed to Heroku. I used Gitpod as a development environment where I commited all changes to git version control system.
+I used push command in Gitpod to save changes into GitHub.
+Then connected my GitHub account to Heroku and set up `Automatic deployment` in Heroku under `Deploy` section in my coinscatalog app.
+
+![](md_data/deployment/deployment_method.png)
+
+
+- On the Heroku website click new and create new app.
+
+- Add App name and choose region and click Create app.
+
+-  Go to Resources tab and in add-ons search for a new Heroku Postgres database and  Provision.
+
+
+GITPOT
+
+In terminal (CLI):
+
+    - pip3 install dj_database_url
+
+    - pip3 install psycopg2-binary
+
+    - pip3 freeze --local > requirements.txt
+
+
+Add Database in settings.py file in project app (get url from HEROKU -> Settings -> Config Vars -> DATABASE_URL)
+
+DATABASES = {
+	'default': dj_database_url.parse('DATABASE_URL')
+}
+
+In terminal (CLI):
+
+    - python3 manage.py showmigrations
+
+    Migrate:
+    - python3 manage.py migrate
+
+    Load database:
+    - python3 manage.py loaddata db.json
+
+    Add super user:
+    python3 manage.py createsuperuser
+
+Add gunicorn to Gitpot
+
+    - pip3 install gunicorn
+
+    - pip3 freeze --local > requirements.txt
+
+Add Procfile and add web dyno:
+
+web: gunicorn shop.wsgi:application
+
+In terminal (CLI):
+
+    - heroku login or heroku login -i
+
+open in a browser and click Log In button or add credentials in terminal, then:
+
+    - heroku config:set DISABLE_COLLECTSTATIC=1 --app fitnesssstudio
+
+
+in settings.py file
+
+ALLOWED_HOSTS = ['fitnesssstudio.herokuapp.com']
+
+
+In terminal (CLI):
+
+initialize heroku git remote:
+
+    - heroku git:remote -a fitnessstudio
+
+and:
+
+    - git push heroku master
+
+
+In HEROKU:
+
+Deploy tab
+
+click connect to GitHub
+search for a repository and Connect
+
+click Enable Automatic Deploys
+
+
+Add in settings tab -> Conf Vars
+
+SECRET_KEY
+
+in settings.py
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
+
+and 
+
+DEBUG = 'Development' in os.environ
+
+
 [Back to Table of contents](#table-of-contents)
 ___
 # Credits
