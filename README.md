@@ -282,9 +282,113 @@ ___
 
 ## Navigation bar
 
+Navigation bar is located on the top of the website. It is responsive and changes to coins icon on mobile devices.
+Brand logo is located in the top left corner. It is a link and it always redirect user to the home page.
+Page links are in the top right corner.
+
+Users who are on the website for the first time and are not logged in can see following options: 
+- Fitness classes
+- Packages
+- My Account:
+    - Register
+    - Login
+- Basket
+
+For administrator who is logged in there are the same options as for a logged in user.
+Additionally, there are two links:
+- Add Class
+- Add Package
+
 ## Sites
 
+### Landing page
+
+User can see on landing page:
+- Welcome message
+- Time table
+- Cards:
+    - Package
+    - Classes
+    - Contact us
+
+Cards links redirect to selected subsite.
+
+### Fitness classes
+
+This site shows all classes with full description.
+From here user is encourage to buy a single class.
+
+For administrator here are an options to `Edit` or `Delete` class.
+
+### Packages
+
+This site shows all available packages.
+From here user can choose and buy selected package
+
+
+### Package details
+
+From this site user can select quantity, add selected package to the bag, view a bag or go back to packages site.
+
+### Shopping Bag
+
+User can see all selected packages on the shopping bag page.
+Update link is available to increase or decrease amount of packages.
+Remove link will remove selected package.
+Buttons below total amount to pay give an options to: go back and add more packages or go to secure checkout.
+
+### Checkout
+
+Secure checkout page allow user to add all nesesary ditails to place an order.
+On right hand site of the screen there is order summary. A test purchase can be made with the following details:
+- credit card: 4242 4242 4242 4242
+- expiration date: 04 / 24
+- CVC: 424
+- ZIP: 42424
+
+Complete order will submit a payment and redirect to order confirmation page.
+Also user can go back to the bag to adjust shopping bag.
+
+### Checkout success - Thank you
+
+After purchase customer can see order summary and to buttons:
+- Go back to home page - user will be redirected do home page
+- Contact Us to book a space - user will be redirected to contact us page.
+
+### Register
+
+Simple registration form that allow user to register on the page.
+
+### Login
+
+Login form that allow user to login on the page.
+
+### My profile
+
+If user is logged in then is able to view its profile. Options to update a profile or to browse order history are available.
+
+### Contact Us
+
+On this site a simple form allow user to contact fitness studio to book a space or make any other enquiry.
+
+### Add Class
+
+This option is available to administrator only. Form allows to add name, description, image url or select an image from local storage.
+
+### Add Package
+
+This is the same as add class, available to administrator only.
+Form allows to category from a list, name, description and price.
+
 ### Possible future implementations:
+
+- add register option before checkout. This will allow user to keep a track of its order hisory.
+
+- create a timetable app that will give a user a chance to book a space
+
+- add blog site 
+
+- add review section for each fitness class
 
 [Back to Table of contents](#table-of-contents)
 ___
