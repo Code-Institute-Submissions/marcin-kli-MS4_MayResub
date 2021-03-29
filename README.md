@@ -394,9 +394,77 @@ Form allows to category from a list, name, description and price.
 ___
 # Technologies used
 
+### HTML5
+* As a structure language.
+
+### CSS
+* As a style language.
+
+### Javascript
+* As a front-end programming language.
+
+### Python 3.8.7
+* As a back-end programming language.
+
+### Bootstrap 
+* Bootstrap@4.5.3 as a CSS framework.
+
+### jQuery 
+* jQuery@3.5.1 as a JavaScript library.
+
+### Email.js
+* As a Javascript library
+
+### Django
+* As a web framework for the Python.
+
+### Jinja
+* As a web template engine for the Python.
+
+### Heroku PostgresSQL:
+* As a relational database.
+
+### Stripe
+* As a payment infrastructure.
+
+### Font Awesome
+* Font Awesome@5.15.2 as an icon library.
+
+### GitHub
+* As a software hosting platform to keep project in a remote location.
+
+### Git
+* As a version-control system tracking.
+
+### Gitpod
+* As a development hosting platform.
+
+### Heroku
+* As a cloud-based hosting platform.
+
+### AWS-S3
+* As a storage service.
+
+### Wireframe.cc
+* As a wireframing tool.
+
+### GNU Image Manipulation Program [GIMP]
+* As an image editor.
+
 [Back to Table of contents](#table-of-contents)
 ___
 # Testing
+
+I used Mozilla web developer tools and Chrome developer tools throughout the project for testing and solving problems with responsiveness and style issues.
+
+Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in both Mozilla web developer tolls and Chrome developer tools.
+
+All tests Passed for devices from 360px on Chrome developer tools and Mozilla web developer tolls.
+
+### Issues found during site development
+
+I found few issues with cards on landing page on Mozilla browser only. At Chrome browser there was no issues.
+
 
 [Back to Table of contents](#table-of-contents)
 ___
@@ -408,9 +476,15 @@ ___
 
 ### Code:
 
+I used Boutique Ado project as a backbone for my project. Majority of the code is from this Code Institute project.
+
 ### Images:
 
-### Content
+Unsplash [https://unsplash.com/photos/pYQ2ASycjgI](https://unsplash.com/photos/pYQ2ASycjgI)
+
+### Content:
+
+All content was taken from: [This github repository](https://github.com/calebharnell/fitazfk-frontend)  
 
 [Back to Table of contents](#table-of-contents)
 ___
