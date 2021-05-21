@@ -455,7 +455,7 @@ ___
 ___
 # Testing
 
-### Testing section is located in [TEST.md](https://github.com/marcin-kli/MS4/blob/Milestone-Projects/test.md) file.
+### Testing section is located in [TEST.md](https://github.com/marcin-kli/MS4/blob/master/test.md) file.
 
 [Back to Table of contents](#table-of-contents)
 ___
