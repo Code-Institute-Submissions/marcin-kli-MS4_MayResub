@@ -117,6 +117,43 @@ Here user can fill the form to contact fitness studio.
 ![](md_data/testing/user_stories/US7.2.png)
 
 
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+8 | Customer | View items in my bag | Check the cost to review
+
+To view items in the bag user need to choose a basket icon in top right corner.
+
+![](md_data/testing/user_stories/US8.png)
+
+From this site user can see basket, cost and adjust if necessary.
+
+![](md_data/testing/user_stories/US8.1.png)
+
+
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+9 | Customer | Enter payment information and see that process is secure | Checkout without issues
+
+From Shopping Bag page customer can click Secure Checkout and will see checkout details.
+From here needs to provide personal details and card details. Last step to complete transaction is by clicking Complete order.
+
+![](md_data/testing/user_stories/US9.1.png)
+
+After few seconds customer will see confirmation page. 
+
+
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+10 | Customer | Contact fitness studio after payment | Booked a place
+
+On confirmation page there are two buttons. Go back to home page and Contact a studio to book a space.
+To book a place customer needs to click second button.
+
+![](md_data/testing/user_stories/US9.2.png)
+
+
+
+
 [Back to Table of contents](#table-of-contents)
 ___
 ## Issues found during site development
