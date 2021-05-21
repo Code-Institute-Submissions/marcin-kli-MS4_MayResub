@@ -81,6 +81,42 @@ On My Profile page user can see Profile Information and Order History.
 ![](md_data/testing/user_stories/US4.1.png)
 
 
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+5 | Potential customer | View a list of packages | Select to purchase
+
+To view a list of packages user needs to go to Packages from the navigation menu.
+
+![](md_data/testing/user_stories/US5.png)
+
+On Packages site user will be able to choose a package.
+
+![](md_data/testing/user_stories/US5.1.png)
+
+
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+6 | Potential customer | View packages details | See price and description
+
+From site Packages customer can choose a package by clicking Buy this package.
+New site will show details of selected package.
+
+![](md_data/testing/user_stories/US6.1.png)
+
+
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+7 | Potential customer | Contact fitness studio | Book a place
+
+On the bottom of the landing page there is contact us card. Contact us link opens Contact page.
+
+![](md_data/testing/user_stories/US7.1.png)
+
+Here user can fill the form to contact fitness studio.
+
+![](md_data/testing/user_stories/US7.2.png)
+
+
 [Back to Table of contents](#table-of-contents)
 ___
 ## Issues found during site development
@@ -100,3 +136,5 @@ One issue related to ID in `a` tag. This appear because there are same id's for 
 No issued on W3C CSS Validator
 
 [Back to Table of contents](#table-of-contents)
+
+#### Back to [README.md](https://github.com/marcin-kli/MP3)
