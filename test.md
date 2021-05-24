@@ -58,7 +58,7 @@ Then on email message there will be a link to confirm:
     You're receiving this e-mail because user test2 has given your e-mail address to register an account on Fitness Studio.
     To confirm this is correct, go to https://fitnesssstudio.herokuapp.com/accounts/confirm-email/MTc:1lk3sk:7p0nJ6eX2Pr0Pt_l2BoIfxOpwQFz_zalrutx5cnN6xs/
 
-New window will appear to confirm
+New window will appear to confirm.
 
 ![](md_data/testing/user_stories/US3.2.png)
 
@@ -152,6 +152,54 @@ To book a place customer needs to click second button.
 ![](md_data/testing/user_stories/US9.2.png)
 
 
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+11 | Administrator | Add new classes or packages | To make them visible to customer
+
+![](md_data/testing/user_stories/US11.png)
+
+From navigation menu administrator can choose add class or add package.
+
+![](md_data/testing/user_stories/US11.1.png)
+
+On classes management page administrator can add new class. Image field is not mandatory.
+New page shows details for new class.
+
+![](md_data/testing/user_stories/US11.1.1.png)
+
+On packages management page administrator can add new package.
+
+![](md_data/testing/user_stories/US11.2.png)
+
+New page shows details for new package.
+
+![](md_data/testing/user_stories/US11.1.1.png)
+
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+12 | Administrator | Edit and update classes or packages | To change a price, description or time
+
+Administrator can edit class or package by clicking Edit button on fitness classes or packages page.
+After that it is possible to change and update class or package.
+
+![](md_data/testing/user_stories/US12.2.png)
+
+![](md_data/testing/user_stories/US12.1.png)
+
+
+**ID** | **As a/an** | **I want to be able to...** | **So that I can**
+--- | --- | --- | ---
+13 | Administrator | Delete classes or packages | To remove from a site
+
+Class or package can be removed by clicking Delete button.
+
+![](md_data/testing/user_stories/US11.2.1.png) 
+![](md_data/testing/user_stories/US11.1.1.png)
+
+A confirmation message will appear in top right corner after deletion.
+
+![](md_data/testing/user_stories/US13.1.png) 
+![](md_data/testing/user_stories/US13.2.png)
 
 
 [Back to Table of contents](#table-of-contents)

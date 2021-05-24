@@ -61,7 +61,7 @@ A MVP (minimum viable product) includes:
 9 | Customer | Enter payment information and see that process is secure | Checkout without issues
 10 | Customer | Contact fitness studio after payment | Booked a place
 11 | Administrator | Add new classes or packages | To make them visible to customer
-12 | Administrator | Edit or update classes or packages | To change a price, description or time
+12 | Administrator | Edit and update classes or packages | To change a price, description or time
 13 | Administrator | Delete classes or packages | To remove from a site
 
 ## Structure of the website
