@@ -321,6 +321,18 @@ ___
 
 I found few issues with cards on landing page on Mozilla browser only. At Chrome browser there was no issues.
 
+___
+A small bug was found during functionality testing.
+
+![](md_data/testing/$.png)
+
+When I add or update a package, toast message card shows $ symbol instead of € symbol.
+
+I changed this in toast_success.html file in line 34
+
+    <span class="float-right">€{{ total|floatformat:2 }}</span>
+
+
 [Back to Table of contents](#table-of-contents)
 ___
 ## Code Validation
