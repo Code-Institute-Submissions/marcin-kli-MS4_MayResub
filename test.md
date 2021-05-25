@@ -1,4 +1,5 @@
 # Table of contents
+- [Functionality testing](#functionality-testing)
 - [User stories testing](#user-stories-testing)
 - [Issues found during site development](#issues-found-during-site-development)
 - [Code Validation](#code-validation)
@@ -8,6 +9,114 @@ I used Mozilla web developer tools and Chrome developer tools throughout the pro
 Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in both Mozilla web developer tolls and Chrome developer tools.
 
 All tests Passed for devices from 360px on Chrome developer tools and Mozilla web developer tolls.
+
+## Functionality testing
+
+### Navigation
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on Logo button | Opens landing page | As Expected | Pass |
+| Clicking on Fitness Classes link | Opens Fitness Classes page | As expected | Pass |
+| Clicking on Packages link | Opens Packages page | As expected | Pass |
+| Clicking on Register link | Opens Register page | As expected | Pass |
+| Clicking on Login link | Login user | As expected | Pass |
+| Clicking on My Profile link | Opens My Profile page | As expected | Pass |
+| Clicking on Logout link | Opens Sign Out page | As expected | Pass |
+| Clicking on Shopping Bag link | Opens Shopping Bag page | As expected | Pass |
+
+### Home page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on Buy Package link | Opens Packages page | As expected | Pass |
+| Clicking on Class description link | Opens Fitness Classes page | As expected | Pass |
+| Clicking on Contact us link | Opens Contact us page | As expected | Pass |
+
+### Fitness Classes page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Buy single class` button | Opens Single entry package page | As expected | Pass |
+| If login as administrator Clicking on `Edit` button | Opens Classes Management for selected class | As expected | Pass |
+| If login as administrator Clicking on `Delete` button | Deletes selected class | As expected | Pass |
+
+### Classes Management - add - administrator only
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Cancel` button | Opens Classes page | As expected | Pass |
+| Clicking on `Add Classes` button | Adds selected class | As expected | Pass |
+
+### Classes Management - edit - administrator only
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Cancel` button | Opens Classes page | As expected | Pass |
+| Clicking on `Update Classes` button | Updates selected class | As expected | Pass |
+
+### Packages page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Buy this package` button | Opens selected package page | As expected | Pass |
+| If login as administrator Clicking on `Edit` button | Opens Packages Management for selected package | As expected | Pass |
+| If login as administrator Clicking on `Delete` button | Deletes selected package | As expected | Pass |
+
+### Package details page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Go to bag` button | Opens Shopping Bag page | As expected | Pass |
+| Clicking on `Add to bag` button | Opens selected package page | As expected | Pass |
+| Clicking on `Go back to add more` button |  Opens Packages page | As expected | Pass |
+
+### Packages Management - add - administrator only
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Cancel` button | Opens Packages page | As expected | Pass |
+| Clicking on `Update package` button | Adds selected package | As expected | Pass |
+
+### Packages Management - edit - administrator only
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Cancel` button | Opens Packages page | As expected | Pass |
+| Clicking on `Update package` button | Updates selected package | As expected | Pass |
+
+### My Profile page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Updatde information` button | Updates user profile | As expected | Pass |
+| Clicking on order number link | Opens order history page for selected order | As expected | Pass |
+
+### Thank you - order confirmation history page when user is login 
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Back to profile` button | Opens My Profile page | As expected | Pass |
+| Clicking on `Cotact us to book a space` button | Opens Contact us page | As expected | Pass |
+
+### Shopping Bag page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on + or - button | increase or decrease quantity | As expected | Pass |
+| Clicking on Updatde link | Updates package quantity, subtotal and total price | As expected | Pass |
+| Clicking on Remove link | Removes selected package | As expected | Pass |
+| Clicking on `Go back to add more` button | Opens Packages page | As expected | Pass |
+| Clicking on `Secure checkout` button | Opens Checkout page | As expected | Pass |
+
+### Checkout page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Go back to the bag` button | Opens Shopping Bag page | As expected | Pass |
+| Clicking on `Complete order` button | Opens Thank you - order confirmation page | As expected | Pass |
+
+### Thank you - order confirmation page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Go back to home page` button | Opens Home page | As expected | Pass |
+| Clicking on `Cotact us to book a space` button | Opens Contact us page | As expected | Pass |
+
+### Contact us page
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| :-------------: |:----------------:| :--------------: | :---------: |
+| Clicking on `Send a message` button | Opens Email sent successfully! popup window | As expected | Pass |
+
+
+[Back to Table of contents](#table-of-contents)
+___
 
 ## User stories testing
 
@@ -179,6 +288,8 @@ New page shows details for new package.
 --- | --- | --- | ---
 12 | Administrator | Edit and update classes or packages | To change a price, description or time
 
+![](md_data/testing/user_stories/US12.png)
+
 Administrator can edit class or package by clicking Edit button on fitness classes or packages page.
 After that it is possible to change and update class or package.
 
@@ -190,6 +301,8 @@ After that it is possible to change and update class or package.
 **ID** | **As a/an** | **I want to be able to...** | **So that I can**
 --- | --- | --- | ---
 13 | Administrator | Delete classes or packages | To remove from a site
+
+![](md_data/testing/user_stories/US12.png)
 
 Class or package can be removed by clicking Delete button.
 
