@@ -1,14 +1,20 @@
 # Table of contents
+- [Compatibility testing](#compatibility-testing)
 - [Functionality testing](#functionality-testing)
 - [User stories testing](#user-stories-testing)
 - [Issues found during site development](#issues-found-during-site-development)
 - [Code Validation](#code-validation)
+
+## Compatibility testing
 
 I used Mozilla web developer tools and Chrome developer tools throughout the project for testing and solving problems with responsiveness and style issues.
 
 Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in both Mozilla web developer tolls and Chrome developer tools.
 
 All tests Passed for devices from 360px on Chrome developer tools and Mozilla web developer tolls.
+
+I tested on hardware devices such as: Lenovo ideapad with Ubuntu and Windows OS's as a virtual machines,
+Lenovo smartphone with Android 7, LG smartphone with Android 8, Google pixel 3 with Android 11. No issues found.
 
 ## Functionality testing
 
@@ -319,9 +325,6 @@ A confirmation message will appear in top right corner after deletion.
 ___
 ## Issues found during site development
 
-I found few issues with cards on landing page on Mozilla browser only. At Chrome browser there was no issues.
-
-___
 A small bug was found during functionality testing.
 
 ![](md_data/testing/$.png)
@@ -331,6 +334,16 @@ When I add or update a package, toast message card shows $ symbol instead of €
 I changed this in toast_success.html file in line 34
 
     <span class="float-right">€{{ total|floatformat:2 }}</span>
+
+___
+Bugs not solved:
+
+I found few issues with cards on landing page on Mozilla browser only. At Chrome browser there was no issues.
+
+Cards are not vertically aligned on all resolutions.
+
+One example on screen width 1560px:
+![](md_data/testing/cards2.png)
 
 
 [Back to Table of contents](#table-of-contents)
@@ -357,4 +370,4 @@ One issue related to ID in `a` tag. This appear because there are same id's for 
 
 [Back to Table of contents](#table-of-contents)
 
-#### Back to [README.md](https://github.com/marcin-kli/MP3)
+#### Back to [README.md](https://github.com/marcin-kli/MS4)
