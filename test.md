@@ -337,13 +337,23 @@ I changed this in toast_success.html file in line 34
 ___
 ## Code Validation
 
-Nu Html Checker
+### Nu Html Checker
 
 One issue related to ID in `a` tag. This appear because there are same id's for mobile and desktop navbars.
 
 ![](md_data/testing/nuhtml.png)
 
-No issued on W3C CSS Validator
+### W3C CSS Validator
+
+![](md_data/testing/CSS.png)
+
+### Jshint to test JavaScript
+
+![](md_data/testing/emailjs.png)
+
+### PEP8 online
+
+#### Result: Pass
 
 [Back to Table of contents](#table-of-contents)
 
