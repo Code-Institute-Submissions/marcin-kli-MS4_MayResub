@@ -178,12 +178,12 @@ I use Django default databases SQLite in gitpod environment and PostgreSQL datab
 
 </details>
 
-<details><summary>User table for checkout app: (click to view)</summary>
+<details><summary>User table for checkout order: (click to view)</summary>
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
+id | IntegerField
 order_number | CharField
-user_profile | ForeignKey
 full_name | CharField
 street_address1 | CharField
 street_address2 | CharField
@@ -196,10 +196,23 @@ date | DateTimeField
 total | DecimalField
 original_bag | TextField
 stripe_pid | CharField
+user_profile_id | ForeignKey
 
 </details>
 
-<details><summary>User table for classes app: (click to view)</summary>
+<details><summary>User table for checkout order item: (click to view)</summary>
+
+| Database Key | Field Type | 
+:-------------:|:----------------:
+id | IntegerField
+quantity | IntegerField
+lineitem_total| DecimalField
+order_id | ForeignKey
+package_id | ForeignKey
+
+</details>
+
+<details><summary>User table for classes: (click to view)</summary>
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
@@ -212,7 +225,7 @@ image | ImageField
 </details>
 
 
-<details><summary>User table for packages app: (click to view)</summary>
+<details><summary>User table for packages: (click to view)</summary>
 
 - #### Category:
 
@@ -225,27 +238,28 @@ name | CharField
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
-category | ForeignKey
 id | IntegerField
 name | CharField
 description | TextField
 price | DecimalField
+category_id | ForeignKey
 
 </details>
 
-<details><summary>User table for profiles app: (click to view)</summary>
+<details><summary>User table for user profile: (click to view)</summary>
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
-user | OneToOneField
+id | IntegerField
 phone_number | CharField
 street_address1 | CharField
 street_address2 | CharField
 town | CharField
-postcode | CharField
 country | CountryField
+postcode | CharField
 
 </details>
+
 
 ### Security
 
