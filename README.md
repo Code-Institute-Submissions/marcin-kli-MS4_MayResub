@@ -163,12 +163,12 @@ I had to change an idea of functionality website during a project. Here are diff
 ### Database schema
 
 Database contains 6 tables (collections):
-- user
+- user profile
 - order
-- user's packages
+- order line item
 - package
 - categories
-- class
+- classes
 
 I use Django default databases SQLite in gitpod environment and PostgreSQL database with Heroku as production enviroment.
 
@@ -225,16 +225,16 @@ image | ImageField
 </details>
 
 
-<details><summary>User table for packages: (click to view)</summary>
-
-- #### Category:
+<details><summary>User table for category: (click to view)</summary>
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
 id | IntegerField
-name | CharField
+category_name | CharField
 
-- #### Packages:
+</details>
+
+<details><summary>User table for packages: (click to view)</summary>
 
 | Database Key | Field Type | 
 :-------------:|:----------------:
@@ -592,7 +592,11 @@ Unsplash [https://unsplash.com/photos/pYQ2ASycjgI](https://unsplash.com/photos/p
 
 ### Content:
 
-All content was taken from: [This github repository](https://github.com/calebharnell/fitazfk-frontend)  
+All content was taken from: [This github repository](https://github.com/calebharnell/fitazfk-frontend)
+
+### Acknowledgments:
+
+I'd like to thank my mentor Adegbenga Adeye for his support and guidance throughout my project.
 
 [Back to Table of contents](#table-of-contents)
 ___
